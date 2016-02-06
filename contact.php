@@ -13,7 +13,7 @@ $message = $_POST['message'];
 $odkogo = "d.kwiatkowski@nivel.com.pl";
 
 // Podajesz adres email na który chcesz otrzymać wiadomość
-$dokogo = "kowalik.paw@gmail.com";
+$dokogo = "d.kwiatkowski@nivel.com.pl";
 
 // Podajesz tytuł jaki ma mieć ta wiadomość email
 $tytul = "Formularz kontaktowy z nivel.com.pl";
@@ -29,9 +29,9 @@ $sukces = mail($dokogo, $tytul, $wiadomosc, "Od: <$odkogo>");
 
 // Przekierowywujemy na potwierdzenie
 if ($sukces){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=index.html\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=success.html\">";
 }
 else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=references.html\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
 }
 ?>
